@@ -41,7 +41,7 @@ class Projectile extends Sprite {
       this.enemy.center.x - this.position.x 
     )
     // Use 'angle' and 'speed' to get the next x/y adjustment
-    const speedFactor = 2
+    const speedFactor = 3   // Increases speed of projectile
     this.velocity.x = Math.cos(angle) * speedFactor
     this.velocity.y = Math.sin(angle) * speedFactor
     // Add the x/y adjustment to the projectiles current x/y position (this will be its new position on the next draw)
