@@ -56,9 +56,10 @@ function spawnEnemies(spawnCount) {
 const projectileSpeed = 6
 const buildingLaunchSpeed = 6
 const enemySpeed = 9
-const enemyKillValue = 10
-const buildingCost = 40
-let hearts = 10
+const enemyCoinValue = 10
+const enemyHealthReduction = 20
+const buildingCoinValue = 40
+let hearts = 100
 let coins = 100
 let enemyCount = 3
 
@@ -155,7 +156,7 @@ function animate() {
       // If remaining distance < sum of the colliding radiis then collision has occurred 
       if (distance < projectile.enemy.radius + projectile.radius) {
         // Reduce the emenies health bar
-        projectile.enemy.health -= 20
+        projectile.enemy.health -= enemyHealthReduction
         // If enemy has no more health...
         console.log(enemies.length)
         if (projectile.enemy.health <= 0) {
@@ -166,7 +167,7 @@ function animate() {
           // ...remove enemy from array 
           if (enemyIndex > -1) {
             enemies.splice(enemyIndex, 1)
-            coins += enemyKillValue
+            coins += enemyCoinValue
             document.querySelector('#coinCounter').innerHTML = coins
           }
         }

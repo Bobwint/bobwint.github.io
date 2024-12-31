@@ -7,8 +7,8 @@ const mouse = {
 }
 
 canvas.addEventListener('click', (event) => {
-  if (activeTile && !activeTile.isOccupied && coins - 50 >= 0) {
-    coins -= buildingCost
+  if (activeTile && !activeTile.isOccupied && coins - buildingCoinValue >= 0) {
+    coins -= buildingCoinValue
     document.querySelector('#coinCounter').innerHTML = coins
     buildings.push(
       new Building({
