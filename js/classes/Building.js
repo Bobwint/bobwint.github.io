@@ -9,7 +9,8 @@ class Building extends Sprite {
       offset: {
         x: 0,
         y: -80
-      }
+      },
+      hold: buildingLaunchSpeed,
     })
     this.position = position
     this.width = 64 * 2

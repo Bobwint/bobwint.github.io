@@ -2,7 +2,10 @@
 class Projectile extends Sprite {
   constructor({ position = { x: 0, y: 0 }, enemy }) {
     // Calls the parents class constructor (Sprite needs 'position' and 'imageSrc')
-    super({ position, imageSrc: 'img/projectile.png' })
+    super({ 
+      position, 
+      imageSrc: 'img/projectile.png' 
+    })
     // Following is no longer needed - now inherited from parent class
     // this.position = position
     this.velocity = {
@@ -41,7 +44,7 @@ class Projectile extends Sprite {
       this.enemy.center.x - this.position.x 
     )
     // Use 'angle' and 'speed' to get the next x/y adjustment
-    const speedFactor = 3   // Increases speed of projectile
+    const speedFactor = projectileSpeed
     this.velocity.x = Math.cos(angle) * speedFactor
     this.velocity.y = Math.sin(angle) * speedFactor
     // Add the x/y adjustment to the projectiles current x/y position (this will be its new position on the next draw)

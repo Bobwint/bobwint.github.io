@@ -51,11 +51,19 @@ function spawnEnemies(spawnCount) {
     console.log(enemies.length)
   }
 }
-const buildings = []
-let activeTile = undefined
-let enemyCount = 3
+
+// --Game Variables--
+const projectileSpeed = 6
+const buildingLaunchSpeed = 6
+const enemySpeed = 9
+const enemyKillValue = 10
+const buildingCost = 40
 let hearts = 10
 let coins = 100
+let enemyCount = 3
+
+const buildings = []
+let activeTile = undefined
 const explosions = []
 spawnEnemies(enemyCount)
 
@@ -158,7 +166,7 @@ function animate() {
           // ...remove enemy from array 
           if (enemyIndex > -1) {
             enemies.splice(enemyIndex, 1)
-            coins += 25
+            coins += enemyKillValue
             document.querySelector('#coinCounter').innerHTML = coins
           }
         }

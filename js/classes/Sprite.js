@@ -4,7 +4,8 @@ class Sprite {
     position = { x: 0, y: 0 }, 
     imageSrc, 
     frames = { max: 1 },
-    offset = { x: 0, y: 0 }
+    offset = { x: 0, y: 0 },
+    hold = 9
   }) {
     this.position = position
     this.image = new Image()
@@ -13,7 +14,7 @@ class Sprite {
       max: frames.max,  // number of frames in sprite sheet
       current: 0,       // current sprite sheet frame
       elapsed: 0,       // infinite counter (needed for 'hold')
-      hold: 9           // image hold count (controls animation speed)
+      hold: hold        // image hold count (controls animation speed)
     }
     // Used to adjust images canvas location when image height spans 2 tiles
     this.offset = offset
