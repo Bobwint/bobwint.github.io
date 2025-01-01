@@ -4,35 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bob's Apps</title>
+  <title>Bob's Web Apps</title>
   <link rel="shortcut icon" href="#">
   <style>
     body {
       background-color: gold;
     }
-    #container {
+
+    #main {
       display: inline-block;
       background-color: black;
       padding: 0.5vw 1vw;
     }
-    
-    .divtext {
-      display: table;
+
+    #content {
       color: white;
       font-family: Verdana;
-      font-size: 8vw;
-      align-items: center;
-      justify-content: center;
+      font-size: 6vw;
+    }
+
+    #appsList {
+      background-color: whitesmoke;
+      font-size: 4vw;
+    }
+
+    li {
+      padding: 0.5vw 1vw;
     }
   </style>
 </head>
 
 <body>
-  <div id="container">
-    <div class="divtext">
-      <b>Bob's Web Apps</b> 
-      <br>(ask him for a link)
+  <div id="main">
+    <div id="content">
+      <h2>Bob's Web Apps</h2>
     </div>
+  </div>
+  <div id="appsList">
+    <ol>
+      <li>Tower Defense 
+        <br>https://bobwint.github.io/TowerDefense</li>
+      <li>Space Inavders 
+        <br>https://bobwint.github.io/SpaceInvaders</li>
+    </ol>
   </div>
 
 </body>
